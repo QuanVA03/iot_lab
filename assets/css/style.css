@@ -309,7 +309,7 @@ footer{
     color: #fff;
 }
 .footer-content2{
-    margin: 40px 152px;
+    margin: 40px 160px;
     display: inline-block;
     font-size: 15px;
 }
@@ -333,7 +333,7 @@ footer{
     line-height: 40px;
     border-radius: 5px;
     width: 150px;
-    font-weight: 000px;
+    font-weight: 100px;
 }
 .android-download:hover,
 .apple-download:hover{
@@ -350,11 +350,27 @@ footer{
 }
 .footer-purpose {
     font-size: 20px; 
+    display: block;
     text-align: center;
 }
+
 .purpose-content{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.5;
+}
+li{
+   list-style: none;
+   
+}
+.address-header{
+    padding-left: 20px;
+}
+.address-content1{
+    opacity: 0.5;
+    margin-top: 10px;
+    padding-left: 20px;
 }
 
 
