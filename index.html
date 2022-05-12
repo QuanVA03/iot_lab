@@ -28,13 +28,13 @@
                 <i class="shopping-icon ti-shopping-cart-full">
                 </i>
             </div>
-            <div class="user-btn">
+            <i class="js-login user-btn">
                 <i class="user-icon ti-user">
                 </i>
-            </div>
+            </i>
             <div class="search-btn">
                 <i class="search-icon ti-search">
-                </i>
+                </i>   
             </div>
        <!--End: icon-btn-->
     </div>
@@ -208,89 +208,64 @@
         </footer>
         <!--End Footer-->
     </div>
+    <!--Login-->
+    <div class="js-modal modal">
+        <div class=" js-modal-container modal-container">
+             <div class="js-modal-close modal-close">
+                 <i class="ti-close"></i>
+             </div>
+            <header class="modal-header">
+                <i class="modal-bag ti-bag"></i>
+                Login
+            </header>
+            <div class="modal-body">
+                <label  for="ticket-quantity" class="modal-label">
+                    <i class="ti-user"></i>
+                    User name
+                </label>
+                <input id = "ticket-quantity" type="text" class="modal-input" placeholder="User name">
+                <label for="email" class="modal-label">
+                 Password
+             </label>
+             <input id="email" type="password" class="modal-input" placeholder="Password">
+             <button id="login" class="modal-buy">
+                 Login
+                 <i class="ti-check"></i>
+             </button>
+            </div>
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="">help?</a></p>
+            </footer>
+        </div>
+    </div>
+    <!--End Login-->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
-    <script src="scripts.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
-    <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
-    const firebaseConfig = {
-        apiKey: "AIzaSyBiDq7r3cJshtNbDwW_43FtNwNZUOkcndk",
-        authDomain: "website-3f7f3.firebaseapp.com",
-        databaseURL: "https://website-3f7f3-default-rtdb.firebaseio.com",
-        projectId: "website-3f7f3",
-        storageBucket: "website-3f7f3.appspot.com",
-        messagingSenderId: "202295774941",
-        appId: "1:202295774941:web:770dde8f71056eb47c9534",
-        measurementId: "G-3JC5QN28K9"
-    };
 
-  // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    firebase.initializeApp(firebaseConfig);
-    //
-    var name = firebase.database().ref().child('tab1').child('name1').child('name');
-    var des = firebase.database().ref().child('tab1').child('name1').child('des');
-    var price = firebase.database().ref().child('tab1').child('name1').child('pri');
-    name.on('value', function(snap) {
-    document.getElementById("na1").innerHTML = snap.val(); });
-    des.on('value', function(snap) {
-    document.getElementById("des1").innerHTML = snap.val(); });
-    price.on('value', function(snap) {
-    document.getElementById("pri1").innerHTML = snap.val(); });
-    //
-    var name = firebase.database().ref().child('tab1').child('name2').child('name');
-    var des = firebase.database().ref().child('tab1').child('name2').child('des');
-    var price = firebase.database().ref().child('tab1').child('name2').child('pri');
-    name.on('value', function(snap) {
-    document.getElementById("na2").innerHTML = snap.val(); });
-    des.on('value', function(snap) {
-    document.getElementById("des2").innerHTML = snap.val(); });
-    price.on('value', function(snap) {
-    document.getElementById("pri2").innerHTML = snap.val(); });  
-    //
-    var name = firebase.database().ref().child('tab1').child('name3').child('name');
-    var des = firebase.database().ref().child('tab1').child('name3').child('des');
-    var price = firebase.database().ref().child('tab1').child('name3').child('pri');
-    name.on('value', function(snap) {
-    document.getElementById("na3").innerHTML = snap.val(); });
-    des.on('value', function(snap) {
-    document.getElementById("des3").innerHTML = snap.val(); });
-    price.on('value', function(snap) {
-    document.getElementById("pri3").innerHTML = snap.val(); });  
-    //
-    var name = firebase.database().ref().child('tab1').child('name4').child('name');
-    var des = firebase.database().ref().child('tab1').child('name4').child('des');
-    var price = firebase.database().ref().child('tab1').child('name4').child('pri');
-    name.on('value', function(snap) {
-    document.getElementById("na4").innerHTML = snap.val(); });
-    des.on('value', function(snap) {
-    document.getElementById("des4").innerHTML = snap.val(); });
-    price.on('value', function(snap) {
-    document.getElementById("pri4").innerHTML = snap.val(); });  
-    //
-    var name = firebase.database().ref().child('tab1').child('name5').child('name');
-    var des = firebase.database().ref().child('tab1').child('name5').child('des');
-    var price = firebase.database().ref().child('tab1').child('name5').child('pri');
-    name.on('value', function(snap) {
-    document.getElementById("na5").innerHTML = snap.val(); });
-    des.on('value', function(snap) {
-    document.getElementById("des5").innerHTML = snap.val(); });
-    price.on('value', function(snap) {
-    document.getElementById("pri5").innerHTML = snap.val(); });  
-    //
-    var name = firebase.database().ref().child('tab1').child('name6').child('name');
-    var des = firebase.database().ref().child('tab1').child('name6').child('des');
-    var price = firebase.database().ref().child('tab1').child('name6').child('pri');
-    name.on('value', function(snap) {
-    document.getElementById("na6").innerHTML = snap.val(); });
-    des.on('value', function(snap) {
-    document.getElementById("des6").innerHTML = snap.val(); });
-    price.on('value', function(snap) {
-    document.getElementById("pri6").innerHTML = snap.val(); });  
-    //
+    
+    <script src="login.js"></script>
+    
+    
+    
+<script>
+       const login = document.querySelector('.js-login')
+       const modal = document.querySelector('.js-modal')
+       const modalContainer = document.querySelector('js-modal-container')
+       const modalClose = document.querySelector('.js-modal-close')
+        function showBuyTickets(){
+            modal.classList.add('open')
+        }
+        function removeBuyticket(){
+            modal.classList.remove('open')
+        }
+       login.addEventListener('click',showBuyTickets)
+       modalClose.addEventListener('click',removeBuyticket)
+       modal.addEventListener('click',removeBuyticket)
+       modalContainer.addEventListener('click',function(event){
+           event.stopPropagation()
+       })
 </script>
 </body>
 </html>
