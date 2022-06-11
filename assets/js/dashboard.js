@@ -314,6 +314,10 @@ function led(state) {
 }
 let img = document.querySelector('img');
 let esp32Button = document.getElementById("esp32")
+if (esp32Button.innerHTML == ""){
+  esp32Button.innerHTML = "OFF";
+  img.src='assets/img/air-conditioner.png';
+}
 esp32Button.addEventListener("click", (e) => {
   
   //Prevent Default Form Submission Behavior
