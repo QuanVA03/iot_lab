@@ -320,11 +320,13 @@ esp32Button.addEventListener("click", (e) => {
   e.preventDefault()
   if (document.getElementById("led2").innerHTML == 1) {
       led(0);
+      esp32Button.innerHTML = "OFF";
       img.src = 'assets/img/air-conditioner.png';
       esp32Button.style.color = "White";
       esp32Button.style.backgroundColor = "Black";
   } else {
       led(1);
+      esp32Button.innerHTML = "ON";
       img.src = 'assets/img/air-conditioner-run.png';
       esp32Button.style.backgroundColor = "green";
       esp32Button.style.color = "White";
