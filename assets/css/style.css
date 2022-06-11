@@ -1,15 +1,3 @@
-/*
-    1 Từ ngoài vào trong
-    2 Từ trên xuống dưới 
-    3 Tổng quan đến chi tiết
-*/
-
-/*
-    1 Vị Trí
-    2 Kích thước (width, height)
-    3 Màu sắc
-    4 Kiểu dáng (kiểu  chữ, hình tròn, vuông,...)
-*/
 
 /*Reset CSS*/
 *{
@@ -79,10 +67,7 @@ html{
 #nav >li{
     display: inline-block;
 }
-/* #nav li{
-    position: relative;
- 
-} */
+
 #nav li a{
     
     text-decoration: none;
@@ -208,9 +193,12 @@ html{
 }
 #content .content-section{
     width: 800px;
+    /* width: 100%; */
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0 112px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
 }
 
 #content .section-heading{
@@ -275,8 +263,8 @@ html{
     margin-top: 48px;
 }
 .member-item img{
-    width: 50%;
-    border-radius: 100px;
+    width: 25%;
+    border-radius: 130px;
 }
 .member-name{
     color: rgba(0, 0, 0, 0.9)
@@ -300,9 +288,80 @@ html{
 iframe{
     margin-top: 60px;
     width: 100%;
-    height: 500px;
-
+    height: 501px;
 }
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+    margin-top: 30px;
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;}
+  
+  /* Add a blue color to the author */
+  .author {color: cornflowerblue;}
 
 footer{
     background-color: #000;
@@ -388,7 +447,7 @@ li{
 }
 .modal-container{
     background-color: #fff;
-    width: 900px;
+    width: 500px;
     max-width: calc(100%-32px);
     min-height: 200px;
     position: relative;
@@ -396,7 +455,7 @@ li{
 }
 .modal-header{
     height: 130px;
-    background-color: #009688;
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -439,20 +498,26 @@ li{
 }
 .modal-buy{
     width: 100%;
-    background-color: #009688;
+    background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
     font-size: 15px;
     text-transform: uppercase;
     padding: 18px;
     border: none;
+    border-radius: 10px;
 }
 .modal-buy:hover{
-    opacity: 0.9;
+    background-color:#f44336 ;
+    color: #fff;
     cursor: pointer;
 }
 .modal-footer{
     padding: 16px;
     text-align: right;
+    background-color: #fff;
+}
+.modal-help{
+    color: #000;
 }
 .modal-help a{
     color: #2196F3;
@@ -467,6 +532,141 @@ li{
         transform: translateY(0);
     }
 }
+/*Tablet*/
+@media (max-width: 1023px) and (min-width: 740px){
+    #intro{
+        margin: 10px 10px 5px;
+        width: 1050px;
+        width: 100%;
+    }
+    
+    #intro .content{
+        float: left;
+        width: 50%;
+    }
+    #content .content-section{
+        width: 800px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 64px 0 112px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .content .intro-header{
+        text-transform: uppercase;
+        font-size: 17px;
+        color: rgba(0,0,0,0.6)
+        
+    }
+    .content .socials-list{
+        margin: 20px 0 15px;
+    }
+    .socials-list a {
+        color: rgba(0,0,0,0.6);
+        width: 20px;
+        margin: 0 5px;
+        font-size: 17px;
+        text-decoration: none;
+    }
+    .content .socials-list i:hover{
+        color: rgba(0,0,0,0.3);
+    }
+    .text{
+        margin-top: 100px;
+        margin-left: 25px;
+        margin-right: 25px;
+        border-bottom: 1px solid #000; 
+    }
+    .content img{
+        margin-top: 75px;
+        width: 300px;
+        height: 150px;
+        border: 1px solid #000;
+        border-radius: 25px;
+        margin-bottom: 48px;
+    }
+    .logo > a{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    #nav >.li1 {
+        display: none;
+        background-color: rgba(0,0,0,0.7);
+    }
+    #nav:hover .li1{
+        display: block;
+    }
+
+    .footer-content2{
+        margin: 40px 20px;
+        display: inline-block;
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .download-header{
+       font-weight: 300;
+    }
+    .download-content{
+        margin-top: 20px;
+        color: #fff;
+        opacity: 0.5;
+    }
+    .box-download{
+        margin-top: 40px;
+    }
+    .android-download,
+    .apple-download{
+        border: 1px solid #000;
+        background-color: #fff;
+        color: #000;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 5px;
+        width: 100px;
+        font-weight: 100px;
+    }
+    .android-download:hover,
+    .apple-download:hover{
+        background-color: #f44336;
+        color: #fff;
+        cursor: pointer;
+    }
+    .apple-download i,
+    .android-download i{
+        margin-right: 5px;
+    }
+    .apple-download{
+        margin-left: 30px;
+    }
+    .footer-purpose {
+        font-size: 20px; 
+        display: block;
+        text-align: center;
+    }
+    
+    .purpose-content{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+        opacity: 0.5;
+    }
+    li{
+       list-style: none;
+       
+    }
+    .address-header{
+        padding-left: 20px;
+    }
+    .address-content1{
+        opacity: 0.5;
+        margin-top: 10px;
+        padding-left: 20px;
+    }   
+}
+
+
 
 
 
